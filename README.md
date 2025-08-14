@@ -1,6 +1,6 @@
 Hệ thống **Multi-Camera Smart Camera** sử dụng ROS2 + OpenCV + YOLOv8 để nhận diện đối tượng từ nhiều camera hoặc video.
 ## 📂 Cấu trúc thư mục
-```
+````
 smart_camera_demo/
 ├─ smart_camera/                 # ROS2 package
 │  ├─ smart_camera/              # Code Python
@@ -12,7 +12,7 @@ smart_camera_demo/
 │  └─ setup.py
 ├─ videos/                        # Thư mục chứa video test
 └─ README.md
-
+```` ``` ````
 
 ---
 
