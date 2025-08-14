@@ -1,0 +1,5 @@
+[console_scripts]
+camera_node = smart_camera.camera_node:main
+multi_camera_launch = smart_camera.multi_camera_launch:main
+yolo_node = smart_camera.yolo_node:main
+

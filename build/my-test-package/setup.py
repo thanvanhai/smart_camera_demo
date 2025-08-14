@@ -1,0 +1,1 @@
+/home/haicoi/smart_camera_demo/venv/lib/python3.10/site-packages/pkg_resources/tests/data/my-test-package-source/setup.py

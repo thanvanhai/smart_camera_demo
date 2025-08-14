@@ -1,0 +1,18 @@
+[0.324s] Invoking command in '/home/haicoi/smart_camera_demo/build/smart_camera': PYTHONPATH=/home/haicoi/smart_camera_demo/build/smart_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haicoi/smart_camera_demo/install/smart_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haicoi/smart_camera_demo/build/smart_camera/build --no-deps symlink_data
+[0.461s] running develop
+[0.531s] running egg_info
+[0.532s] writing smart_camera.egg-info/PKG-INFO
+[0.532s] writing dependency_links to smart_camera.egg-info/dependency_links.txt
+[0.532s] writing entry points to smart_camera.egg-info/entry_points.txt
+[0.532s] writing requirements to smart_camera.egg-info/requires.txt
+[0.532s] writing top-level names to smart_camera.egg-info/top_level.txt
+[0.533s] reading manifest file 'smart_camera.egg-info/SOURCES.txt'
+[0.533s] writing manifest file 'smart_camera.egg-info/SOURCES.txt'
+[0.534s] running build_ext
+[0.534s] Creating /home/haicoi/smart_camera_demo/install/smart_camera/lib/python3.10/site-packages/smart-camera.egg-link (link to .)
+[0.535s] Installing camera_node script to /home/haicoi/smart_camera_demo/install/smart_camera/lib/smart_camera
+[0.535s] Installing yolo_node script to /home/haicoi/smart_camera_demo/install/smart_camera/lib/smart_camera
+[0.535s] 
+[0.535s] Installed /home/haicoi/smart_camera_demo/build/smart_camera
+[0.535s] running symlink_data
+[0.552s] Invoked command in '/home/haicoi/smart_camera_demo/build/smart_camera' returned '0': PYTHONPATH=/home/haicoi/smart_camera_demo/build/smart_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/haicoi/smart_camera_demo/install/smart_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/haicoi/smart_camera_demo/build/smart_camera/build --no-deps symlink_data

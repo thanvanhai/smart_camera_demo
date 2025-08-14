@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating smart_camera.egg-info
+writing smart_camera.egg-info/PKG-INFO
+writing dependency_links to smart_camera.egg-info/dependency_links.txt
+writing entry points to smart_camera.egg-info/entry_points.txt
+writing requirements to smart_camera.egg-info/requires.txt
+writing top-level names to smart_camera.egg-info/top_level.txt
+writing manifest file 'smart_camera.egg-info/SOURCES.txt'
+reading manifest file 'smart_camera.egg-info/SOURCES.txt'
+writing manifest file 'smart_camera.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/haicoi/smart_camera_demo/install/smart_camera/lib/python3.10/site-packages/smart-camera.egg-link (link to .)
+
+Installed /home/haicoi/smart_camera_demo/build/smart_camera
+running symlink_data
+creating /home/haicoi/smart_camera_demo/install/smart_camera/share/ament_index
+creating /home/haicoi/smart_camera_demo/install/smart_camera/share/ament_index/resource_index
+creating /home/haicoi/smart_camera_demo/install/smart_camera/share/ament_index/resource_index/packages
+symbolically linking /home/haicoi/smart_camera_demo/build/smart_camera/resource/smart_camera -> /home/haicoi/smart_camera_demo/install/smart_camera/share/ament_index/resource_index/packages
+symbolically linking /home/haicoi/smart_camera_demo/build/smart_camera/package.xml -> /home/haicoi/smart_camera_demo/install/smart_camera/share/smart_camera
