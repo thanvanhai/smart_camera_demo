@@ -105,9 +105,11 @@ class CameraManagerGUI:
 
     def add_camera(self):
         name = simpledialog.askstring("Camera Name", "Enter camera name:")
-        topic = simpledialog.askstring("Topic", "Enter ROS topic:")
+        # topic = simpledialog.askstring("Topic", "Enter ROS topic:")
         video_path = simpledialog.askstring("Video Path", "Enter RTSP URL or video path:")
-        if name and topic:
+        # if name and topic:
+        if name:
+            topic = f"/{name.strip().replace(' ', '_')}/image_raw"
             add_camera(name, topic, video_path or '')
             self.refresh_list()
             self.start_camera_streams()
