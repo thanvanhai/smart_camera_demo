@@ -1,4 +1,5 @@
 import rclpy
+from rclpy.executors import MultiThreadedExecutor
 from smart_camera.camera_node_rtsp import CameraNode
 import sqlite3
 
@@ -22,8 +23,13 @@ def main(args=None):
         node = CameraNode(name, topic, video_path)
         nodes.append(node)
 
+    # Dùng MultiThreadedExecutor thay cho spin_multi_threaded
+    executor = MultiThreadedExecutor()
+    for node in nodes:
+        executor.add_node(node)
+
     try:
-        rclpy.spin_multi_threaded(nodes)
+        executor.spin()
     except KeyboardInterrupt:
         print("Shutting down camera nodes...")
     finally:
