@@ -1,5 +1,5 @@
 [console_scripts]
-camera_node = smart_camera.camera_node:main
-multi_camera_launch = smart_camera.multi_camera_launch:main
-yolo_node = smart_camera.yolo_node:main
+camera_manager_gui = smart_camera.camera_manager_gui:main
+multi_camera_launch_rtsp = smart_camera.multi_camera_launch_rtsp:main
+yolo_multi_subscriber = smart_camera.yolo_multi_subscriber:main
 

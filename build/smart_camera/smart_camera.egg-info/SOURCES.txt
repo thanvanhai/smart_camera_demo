@@ -3,9 +3,11 @@ setup.cfg
 setup.py
 resource/smart_camera
 smart_camera/__init__.py
+smart_camera/camera_manager_gui.py
 smart_camera/camera_node.py
 smart_camera/camera_node_multi.py
-smart_camera/multi_camera_launch.py
+smart_camera/camera_node_rtsp.py
+smart_camera/multi_camera_launch_rtsp.py
 smart_camera/yolo_multi_subscriber.py
 smart_camera/yolo_node.py
 smart_camera.egg-info/PKG-INFO
