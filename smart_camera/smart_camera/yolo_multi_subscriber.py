@@ -1,9 +1,9 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.executors import MultiThreadedExecutor
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from ultralytics import YOLO
-import cv2
 import sqlite3
 
 DB_PATH = "camera.db"
@@ -42,8 +42,13 @@ def main():
     for topic in get_camera_topics():
         node = YOLONode(topic, output_topic=topic.replace('image_raw', 'yolo'))
         nodes.append(node)
+
+    executor = MultiThreadedExecutor()
+    for node in nodes:
+        executor.add_node(node)
+
     try:
-        rclpy.spin_multi_threaded(nodes)
+        executor.spin()
     except KeyboardInterrupt:
         pass
     finally:
