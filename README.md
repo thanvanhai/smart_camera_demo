@@ -2,17 +2,21 @@ Hệ thống **Multi-Camera Smart Camera** sử dụng ROS2 + OpenCV + YOLOv8 đ
 ## 📂 Cấu trúc thư mục
 ````
 smart_camera_demo/
-├─ smart_camera/                 # ROS2 package
-│  ├─ smart_camera/              # Code Python
-│  │  ├─ __init__.py
-│  │  ├─ camera_node.py          # Node phát video/webcam
-│  │  ├─ yolo_multi_subscriber.py# Node YOLO nhận dạng
-│  │  └─ multi_camera_launch.py  # Launch nhiều camera
+├─ smart_camera/
+│  ├─ smart_camera/
+│  │  ├─ camera_node.py
+│  │  ├─ yolo_multi_subscriber.py
+│  │  ├─ person_verifier_node.py     # NEW: Node xác thực danh tính
+│  │  ├─ face_utils.py               # NEW: Tiện ích nạp model, trích embedding
+│  │  ├─ multi_camera_launch.py
+│  │  └─ schemas.py                  # NEW: Kiểu dữ liệu chung (dict/msg)
 │  ├─ package.xml
 │  └─ setup.py
-├─ videos/                        # Thư mục chứa video test
+├─ videos/
+├─ data/
+│  ├─ enroll/                        # Ảnh gốc người cần xác thực
+│  └─ embeddings.json                # File lưu embedding đã enroll
 └─ README.md
-```` ``` ````
 
 ---
 

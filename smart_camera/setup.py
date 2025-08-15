@@ -9,10 +9,13 @@ setup(
     install_requires=[
         'setuptools',
         'rclpy',
-        'opencv-python',
+        'opencv-python-headless',  # tránh xung đột GUI khi chạy trong ROS2
         'cv_bridge',
         'ultralytics',
-        'pillow'
+        'pillow',
+        'insightface',
+        'onnxruntime-gpu',  # dùng bản này nếu có CUDA, nếu không thì đổi thành 'onnxruntime'
+        'numpy',
     ],
     zip_safe=True,
     author='Haicoi',
@@ -24,7 +27,8 @@ setup(
         'console_scripts': [
             'multi_camera_launch_rtsp = smart_camera.multi_camera_launch_rtsp:main',
             'yolo_multi_subscriber = smart_camera.yolo_multi_subscriber:main',
-            'camera_manager_gui = smart_camera.camera_manager_gui:main'
+            'camera_manager_gui = smart_camera.camera_manager_gui:main',
+            'person_verifier_node = smart_camera.person_verifier_node:main',
         ],
     },
 )
