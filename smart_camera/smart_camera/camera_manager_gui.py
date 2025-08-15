@@ -43,6 +43,16 @@ def delete_camera(camera_id):
     conn.commit()
     conn.close()
 
+def update_camera(camera_id, name, topic, video_path):
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute(
+        "UPDATE cameras SET name=?, topic=?, video_path=? WHERE id=?",
+        (name, topic, video_path, camera_id)
+    )
+    conn.commit()
+    conn.close()
+
 # -------------------- Camera Stream --------------------
 class CameraStream:
     def __init__(self, canvas, label, camera):
@@ -91,6 +101,7 @@ class CameraManagerGUI:
         self.listbox.bind("<<ListboxSelect>>", self.on_camera_select)
 
         tk.Button(self.controls_frame, text="Add Camera", command=self.add_camera).pack(pady=5)
+        tk.Button(self.controls_frame, text="Edit Camera", command=self.edit_camera).pack(pady=5)
         tk.Button(self.controls_frame, text="Delete Camera", command=self.delete_camera).pack(pady=5)
 
         # Stream frame (1 canvas + 1 label duy nhất)
@@ -117,6 +128,24 @@ class CameraManagerGUI:
         if name:
             topic = f"/{name.strip().replace(' ', '_')}/image_raw"
             add_camera(name, topic, video_path or '')
+            self.refresh_list()
+
+    # -------------------- Edit camera --------------------
+    def edit_camera(self):
+        selection = self.listbox.curselection()
+        if not selection:
+            messagebox.showwarning("Warning", "Select a camera first")
+            return
+
+        camera_id = int(self.listbox.get(selection[0]).split(":")[0])
+        cam = [c for c in get_cameras() if c[0] == camera_id][0]
+
+        new_name = simpledialog.askstring("Edit Camera Name", "Enter new camera name:", initialvalue=cam[1])
+        new_video_path = simpledialog.askstring("Edit Video Path", "Enter new RTSP URL or video path:", initialvalue=cam[2])
+
+        if new_name:
+            new_topic = f"/{new_name.strip().replace(' ', '_')}/image_raw"
+            update_camera(camera_id, new_name, new_topic, new_video_path or '')
             self.refresh_list()
 
     # -------------------- Delete camera --------------------
