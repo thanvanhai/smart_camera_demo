@@ -1,5 +1,6 @@
 [console_scripts]
 camera_manager_gui = smart_camera.camera_manager_gui:main
 multi_camera_launch_rtsp = smart_camera.multi_camera_launch_rtsp:main
+person_verifier_node = smart_camera.person_verifier_node:main
 yolo_multi_subscriber = smart_camera.yolo_multi_subscriber:main
 

@@ -1,5 +1,8 @@
 cv_bridge
-opencv-python
+insightface
+numpy
+onnxruntime-gpu
+opencv-python-headless
 pillow
 rclpy
 setuptools
