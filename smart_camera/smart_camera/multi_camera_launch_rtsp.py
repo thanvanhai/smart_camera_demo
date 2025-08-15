@@ -22,7 +22,6 @@ def main(args=None):
         name, topic, video_path = cam
         node = CameraNode(name, topic, video_path)
         nodes.append(node)
-
     # Dùng MultiThreadedExecutor thay cho spin_multi_threaded
     executor = MultiThreadedExecutor()
     for node in nodes:
